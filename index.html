@@ -38,6 +38,7 @@
       <input type="radio" id="selection5" name="rating" value="5">
       <label for="selection5" class="toggleLabel">5</label>
       <button type="submit">Submit</button>
+      <p class="warn">Please select a value</p>
     </form>
 
   </div>
@@ -49,7 +50,7 @@
   <div class="thank-you">
     <img src="./images/illustration-thank-you.svg" alt="thank you image">
 
-    <p>You selected <span class="result"></span> out of 5</p>
+    <p class="dynamic-result">You selected <span class="result"></span> out of 5</p>
     <h2>Thank you!</h2>
     <p>We appreciate you taking the time to give a rating. If you ever need more support,
     don’t hesitate to get in touch!</p>
@@ -64,5 +65,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Bart Batalinski</a>.
   </div>
+
+
+  <script src="./main.js"></script>
 </body>
 </html>
