@@ -5,6 +5,15 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 *, *:before, *:after {box-sizing: inherit}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+/* Variables */
+:root {
+    --primary-color: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey:  hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --v-dark-blue: hsl(216, 12%, 8%);
+}
 
 /* Default Styling */
 html {
@@ -14,5 +23,133 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--v-dark-blue);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h1,
+label,
+h2,
+p {
+    color: var(--white);
+}
+
+p {
+    font-size: 1.3rem;
+    color: var(--medium-grey);
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+.attribution {
+    display: none;
+}
+
+/* .start styles begin */
+.start,
+.thank-you {
+    max-width: 380px;
+    height: 400px;
+    padding: 2.5em 2em;
+    margin: 0 auto;
+    background-color: var(--dark-blue);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: space-around;
+    border-radius: 30px;
+}
+
+.star {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding-bottom: 0.1em;
+    background-color: var(--dark-blue);
+    filter: brightness(130%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    padding: 0.7em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    margin: 1.5em 0 0 0;
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggleLabel {
+    cursor: pointer;
+    background-color: var(--dark-blue);
+    filter: brightness(130%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 0.2em 0 0 0;
+    color: var(--medium-grey);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+    transition: color 0.1s ease-in-out;
+}
+
+.toggleLabel:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+input[type="radio"]:checked+label {
+    background-color: var(--light-grey);
+    color: var(--white);
+}
+
+/* .thank-you styles begin */
+.thank-you {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+.thank-you img {
+    width: 50%;
 }
