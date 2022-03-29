@@ -8,35 +8,50 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
   <!-- Rating state start -->
+  <div class="start">
+    <div class="star">
+      <img src="./images/icon-star.svg" alt="star icon">
+    </div>
 
-  How did we do?
+    <h1>How did we do?</h1>
+    <p>Please let us know how we did with your support request. All feedback is appreciated
+    to help us improve our offering!</p>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+    <form action="#">
+      <input type="radio" id="selection1" name="rating" value="1">
+      <label for="selection1">1</label>
+      <input type="radio" id="selection2" name="rating" value="2">
+      <label for="selection2">2</label>
+      <input type="radio" id="selection3" name="rating" value="3">
+      <label for="selection3">3</label>
+      <input type="radio" id="selection4" name="rating" value="4">
+      <label for="selection4">4</label>
+      <input type="radio" id="selection5" name="rating" value="5">
+      <label for="selection5">5</label>
+      <button type="submit">Submit</button>
+    </form>
 
-  1 2 3 4 5
-
-  Submit
+  </div>
 
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
 
-  You selected <!-- Add rating here --> out of 5
+  <div class="thank-you">
+    <img src="./images/illustration-thank-you.svg" alt="thank you image">
 
-  Thank you!
+    <p>You selected <span class="result"></span> out of 5</p>
+    <h2>Thank you!</h2>
+    <p>We appreciate you taking the time to give a rating. If you ever need more support,
+    don’t hesitate to get in touch!</p>
+  </div>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+  
 
   <!-- Thank you state end -->
 
