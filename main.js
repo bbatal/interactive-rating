@@ -11,12 +11,12 @@ formRef.addEventListener('submit', (e) => {
     e.preventDefault();
     if(document.querySelector('input[name="rating"]:checked')) {
         const radioAns = document.querySelector('input[name="rating"]:checked').value;
-        console.log(radioAns);
+        // console.log(radioAns);
 
         startView.style.display = 'none';
         result.textContent = radioAns;
         document.querySelector('input[name="rating"]:checked').checked = false;
-        endView.style.display = 'flex'
+        endView.style.display = 'flex';
 
 
     } else {
